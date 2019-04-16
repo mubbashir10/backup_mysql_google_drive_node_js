@@ -10,6 +10,7 @@ filename = 'dump_'+date.format(now, 'YYYY_MM_DD_(HH_mm_ss)')+'.sql'
 backup('localhost', 'root', '', 'db', filename)
 
 // upload to google drive (filename, parent id (use 'root' to upload in root directory), true/fasle (delete the file from local after uploading, default is false))
-google_drive(filename, 'root', true)
+// google_drive(filename, 'root', true) //delete files after upload
+google_drive(filename, 'root') // doesn't delete file after upload
 
 
